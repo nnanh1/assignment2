@@ -1,0 +1,360 @@
+/* SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* MAIN COLOR: #199cdb 
+GREY COLOR: #343a40 #e9ecef #f1f3f5*/
+
+/* cài đặt chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  color: #343a40;
+}
+
+section:nth-child(odd) {
+  background-color: #f1f3f5;
+}
+.container {
+  margin: 48px auto;
+  width: 75%;
+}
+/* cài đặt phần banner */
+.banner {
+  height: 60vh;
+  overflow: hidden;
+}
+.banner-img {
+  position: relative;
+  filter: brightness(50%);
+}
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  padding-bottom: 32px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-text h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+.banner-text p {
+  font-size: 14px;
+  color: #adb5bd;
+}
+
+/* cài đặt thanh điều hướng  */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topnav {
+  text-decoration: none;
+  color: #343a40;
+  padding: 20px 48px;
+  border-left: 1px solid #f1f3f5;
+  border-collapse: collapse;
+  text-transform: uppercase;
+}
+.icon {
+  color: #199cdb;
+}
+/* cài đặt ảnh đại diện phần nâng cao */
+/* vô hiệu cài đặt cũ
+ .topnav-profile {
+  padding: 0;
+  text-align: center;
+  padding: 12px 64px;
+} */
+.topnav-profile img {
+  border-radius: 50%;
+  display: inline-block;
+  border: solid 3px #fff;
+  transform: scale(2.5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.nav-container img:hover {
+  position: sticky;
+  top: 50%;
+}
+.topnav-profile {
+  padding: 0 128px;
+  border: none;
+}
+
+/* cài đặt phần Mục tiêu nghề nghiệp và Thông tin cá nhân  */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.target {
+  padding: 32px;
+  line-height: 1.6;
+}
+.personal-info {
+  background-color: #e9ecef;
+  padding: 32px;
+}
+.section-title {
+  margin: 32px 0;
+}
+.info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.icon--list {
+  margin: 32px 0;
+}
+
+/* Thông tin nghề nghiệp */
+/* cài đặt cho 3 cột kinh nghiệm, học vấn, hoạt động */
+.job-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-rows: max-content;
+  gap: 32px;
+  margin: 32px auto;
+}
+.experience,
+.education,
+.activity,
+.hobby,
+.Language,
+.skill {
+  border: solid 1px #e9ecef;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 0.75fr 0.25fr;
+  grid-template-rows: 75px 1fr;
+}
+.job-container h2 {
+  font-size: 24px;
+}
+.job-container i {
+  font-size: 36px;
+  text-align: center;
+  padding-top: 24px;
+}
+.detail {
+  grid-column: 1/-1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  line-height: 2;
+  margin-top: 24px;
+
+  /* xóa bỏ bullet point mặc định */
+  list-style: none;
+  margin-left: 24px;
+}
+/* thiết lập pullet point màu xanh */
+.detail li::before {
+  content: "\2022";
+  color: #199cdb;
+  font-weight: bold;
+  font-size: 24px;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+/* tạo nền xanh cho chữ "Hiện tại" */
+.bg--blue {
+  background-color: #199cdb;
+  color: #f1f3f5;
+}
+#present {
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* cài đặt phần sở thích */
+.hobby--detail {
+  color: #199cdb;
+  margin: 24px 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 48px auto;
+
+  gap: 10px;
+}
+.hobby--detail i {
+  margin: 0 auto;
+  padding: 12px 10px;
+  border: solid 1px #199cdb;
+  font-size: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.hobby--detail p {
+  text-align: center;
+  font-size: 14px;
+  margin: -2px;
+  color: #343a40;
+}
+
+/* cài đặt phần kỹ năng và ngôn ngữ */
+.lan--detail,
+.skill-detail {
+  display: inline;
+  margin: 0;
+}
+.lan--detail span,
+.skill-detail span {
+  background-color: #e9ecef;
+  display: inline-block;
+  height: 2px;
+  width: 52px;
+  margin-right: 12px;
+}
+.lan--detail .active,
+.skill-detail .active {
+  background-color: #199cdb;
+}
+
+/* cài đặt phần Chứng chỉ - Giải thưởng */
+.cert--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+}
+
+.cert--container h1 {
+  grid-column: 1/-1;
+  margin: 0;
+  margin-top: 64px;
+  font-weight: 500;
+  font-size: 30px;
+}
+.item1 {
+  grid-area: img;
+  width: 100%;
+}
+.item2 {
+  grid-area: title;
+  text-transform: uppercase;
+  font-size: 14px;
+  align-self: center;
+}
+.item3 {
+  grid-area: content1;
+  align-self: center;
+}
+.item4 {
+  grid-area: content2;
+  align-self: start;
+}
+.cert--detail {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-areas:
+    "img title"
+    "img content1"
+    "img content2";
+  column-gap: 18px;
+  font-size: 14px;
+  margin: 32px 0;
+  padding-right: 18px;
+}
+.cert--detail h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+/* tạo border dọc phân cách cột */
+.border--right {
+  border-right: solid 2px #d6c08d;
+}
+/* tạo border ngang phân cách dòng */
+.blank {
+  border: solid 1px #d6c08d;
+  grid-column: 1/-1;
+}
+
+/* cài đặt phần Dự án */
+.projects {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.certain--project {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+.project--img {
+  width: 100%;
+}
+.project--title {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border: solid 1px #f1f3f5;
+}
+.project--info {
+  padding: 16px 32px;
+  border: solid 1px #f1f3f5;
+
+  display: flex;
+  gap: 12px;
+}
+.period {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 1000px;
+}
+table {
+  border-collapse: collapse;
+  font-size: 14px;
+  height: 100%;
+}
+tr {
+  border: solid 1px #f1f3f5;
+}
+th,
+td {
+  padding: 12px;
+  text-align: start;
+  vertical-align: top;
+}
+th {
+  font-weight: 400;
+  width: 30%;
+}
+
+/* cài đặt phần Liên hệ */
+.contact {
+  padding: 32px 0;
+  text-align: center;
+}
+.contact i {
+  display: inline-block;
+  font-size: 30px;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.contact li {
+  display: inline-block;
+  padding-right: 14px;
+  font-size: 14px;
+}
